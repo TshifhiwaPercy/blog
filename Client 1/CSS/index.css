@@ -178,8 +178,28 @@ label #cancel {
     font-size: 13px;
     margin-right: 15px;
 }
-@media (max-width: 640px) {
-    
+@media (max-width: 765px) {
+   .post{
+    margin-bottom:10px;
+    background-color:rgb(240,240,240);
+    border-radius:4px;
+    padding-top:10px;
+   }
+   .newsIMG{
+    border-radius:20px;
+   }
+    .post:hover{
+        cursor:pointer;
+        
+    }
+    .sidebar{
+        visibility:hidden;
+        position:absolute;
+    }
+    .main-content{
+        text-align:center;
+        margin-left:12.5%;
+    }
     label #menu {
         display: block;
     }
