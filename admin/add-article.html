@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>Add article</title>
+  <!--Materialize css start-->
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!--Materialize css end-->
+
+	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+	<!-- Include the Quill library -->
+	<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+  <!--User defined-->
+  <link rel="stylesheet" href="css/add-article.css" />
+<script>
+  $(document).ready(function() {
+    M.updateTextFields();
+  });
+</script>
+</head>
+	<body>
+    <!--Navbar -->
+    <nav>
+    </nav>
+  <div class='main-body'>
+    <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">mode_edit</i>
+          <textarea id="article_heading" class="materialize-textarea"></textarea>
+          <label for="icon_prefix2">Enter post heading here</label>
+        </div>
+      </div>
+
+		<div id="main-container">
+      <div id="toolbar-container">
+      </div>
+      <div id="editor-container">
+      </div>
+		</div>
+    <center><a class="waves-effect waves-light btn medium">Submit<i class="material-icons right">send</i></a></center>
+  </div>
+	</body>
+	<script>
+		var toolbarOptions = [
+      [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+ ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+  ['blockquote', 'code-block'],
+
+  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+  [{ 'direction': 'rtl' }],                         // text direction
+
+
+  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+  [{ 'font': [] }],
+  [{ 'align': [] }],['image','video','link'],
+
+  ['clean']                                         // remove formatting button
+];
+  var quill = new Quill('#editor-container', {
+    theme: 'snow',
+    modules:{
+    	toolbar:toolbarOptions
+    	}
+  });
+</script>
+</html>
