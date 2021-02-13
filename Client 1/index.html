@@ -11,6 +11,11 @@
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="font/bootstrap/bootstrap-icons.css" />
 
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="CSS/index.css">
     <script src="js/all.js"></script>
 </head>
@@ -21,61 +26,31 @@
             <i class="fas fa-bars" id="menu"></i>
             <i class="fas fa-times" id="cancel"></i>
         </label>
-        <img src="Images/logo_transparents.jpg" alt="">
+        <img src="Images/logo_transparents.jpg" alt="" id="logo" />
         <ul class="menuList">                
-            <li><a href="/index.html"> <i class="fas fa-laptop"></i> Content Research</a>
-                <ul class="dropdown1" style="width: 20%;">
-                    <li><a href=""><i class="fas fa-bookmark"></i> Saved Content</a></li>
-                    <li><a href="">Most Shared</a></li>
-                    <li><a href="">Trending Now</a></li>
-                    <li><a href="">Backlinks</a></li>
-                    <li><a href="">Content Analysis</a></li>
-                    <li><a href="">Facebook Analyzer</a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fas fa-users"></i> Influencers</a>
-                <ul class="dropdown1">
-                    <li><a href="">Link1</a></li>
-                    <li><a href="">Link1</a></li>
-                    <li><a href="">Link1</a></li>
-                </ul>
-            </li>
-            <li><a href="#"><i class="fas fa-tachometer-alt"></i> Monitoring</a>
-                <ul class="dropdown1">                    
-                    <li><a href="">Link1</a></li>
-                    <li><a href="">Link1</a></li>
-                    <li><a href="">Link1</a></li>
-                </ul>
-            </li>            
-        </ul> 
+            <li><a href="/index.html"> <i class="fas fa-laptop"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-users"></i>About us</a></li>
+            <li><a href="#"><i class="fas fa-tachometer-alt"></i> Contact us</a></li>
+            <hr id="navbar_sep"/>
+            <li id="login_li"><button type="button" id="btnLogin" runat="server" class="btn btn-primary" >Login</button></li>
+            <li><button id="btnReg" type="button" runat="server" id="btnRegister" class="btn btn-success">Register</button></li>
+         </ul>
+
     </nav>  
-    <div class="sidebar">
-        <button class="btnAdd"><i class="fas fa-plus"></i> Add Trending Feed</button>
-        <input type="search" class="searchBar" spellcheck="false" placeholder="Search for content">
-        <button  class="search-btn" ><i class="fas fa-search"></i></button>  
-        <a href=""><i class="fas fa-newspaper"></i> News</a>
-        <a href=""><i class="fas fa-star-of-life"></i> Everything</a>
-        <a href=""><i class="fas fa-football-ball"></i> Sport</a>
-        <a href=""><i class="fas fa-tv"></i> Entertainment</a>
-        <a href=""><i class="fas fa-microchip"></i> Tech</a>
-        <a href=""><i class="fas fa-briefcase"></i> Business</a>
-        <a href=""><i class="fas fa-hourglass-half"></i> Politics</a>
-        <a href=""><i class="fas fa-hospital"></i> Health</a>
-    </div>   
+   
     <div class="main-content">
+    	<div class="posts_container">
         <div class="top">
             <p class="heading">Today's Trending <label for=""><b>Business</b></label> Content</p><br>        
             <p><b><i>Filter by: </i>
-                <input class="radio-all" type="radio" name="filter" id="hour-1">
-                <label for="hour-1">1 Hour</label>
-                <input class="radio-all" type="radio" name="filter" id="hour-3">
-                <label for="hour-3">3 Hour</label>
-                <input class="radio-all" type="radio" name="filter" id="hour-6">
-                <label for="hour-6">6 Hour</label>
-                <input class="radio-all" type="radio" name="filter" id="hour-12">
-                <label for="hour-12">12 Hour</label>
-                <input class="radio-all" type="radio" name="filter" id="hour-24">
-                <label for="hour-24">24 Hour</label>
+            	<select id="filterSelect">
+            		<option value=1>1 Hour</option>
+            		<option value=3>3 Hours</option>
+            		<option value=24>24 Hours</option>
+            		<option value=168>1 Week</option>
+            		<option value=744>1 Month</option>
+            		<option value=1488>2 Months</option>
+            	</select>
             </b>
         </p>
         </div> 
